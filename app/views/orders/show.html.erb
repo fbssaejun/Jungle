@@ -5,8 +5,10 @@
   </header>
 
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order! </h4>
+    <h4>Your order has been placed, Thank you for your order!</h4>
   </div>
+
+  <h3>Order summary of : <%= @order.email %> </h3>
 
   <div class="panel panel-default items">
   <table class="table table-bordered">
@@ -19,12 +21,25 @@
       </tr>
     </thead>
     <tbody>
-      <% enhanced_cart.each do |item| %>
-        <tr>
-        <td>
-        <% item[:price] %>
+    <% @order.line_items.each do |item| %>
+      <tr>
+      <td colspan="2">
+        <%= image_tag item.product.image.tiny %>
+        <b><%= item.product.name%></b>
+         <br><br> 
+         <b>Item description:</b>
+         <%= item.product.description %> 
         </td>
-        </tr>
+        <td>
+        <%= humanized_money_with_symbol item.product.price.to_i %>
+        </td>
+        <td>
+        <%=item[:quantity].to_i%>
+        </td>
+        <td>
+          <%= humanized_money_with_symbol (item.product.price.to_i * item[:quantity].to_i).to_i %>
+        </td>
+      </tr>
       <% end %>
     </tbody>
     <tfoot>
@@ -33,7 +48,7 @@
           TOTAL:
         </th>
         <th>
-          <%= humanized_money_with_symbol cart_subtotal_cents / 100.0 %>
+          <%= humanized_money_with_symbol @order.total_cents / 100.0 %>
         </th>
       </tr>
     </tfoot>
