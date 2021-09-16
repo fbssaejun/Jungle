@@ -18,8 +18,6 @@ Rails.application.routes.draw do
     resources :categories, only: [:index, :new, :create]
   end
 
-      # This route sends requests to our naked url to the *cool* action in the *gif* controller.
-      root to: 'gif#cool'
     
       # I've created a gif controller so I have a page I can secure later. 
       # This is optional (as is the root to: above).
