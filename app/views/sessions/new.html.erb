@@ -1,21 +1,8 @@
 
 <h1>Login</h1>
 
-<%= form_tag '/login' do %>
-  <div class="form-group">
-    <label for="Email">Email address</label>
-    <input type="email" class="form-control" id="Email" aria-describedby="emailHelp" placeholder="Enter email">
-  <div>
-  <br>
-  <div class="form-group">
-    <label for="password">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  <div>
-  <br>
-    <button type="submit" class="btn btn-primary">Submit</button>
-
+<%= bootstrap_form_tag url: '/login' do |f| %>
+  <%= f.email_field :email, placeholder: 'Enter email' %>
+  <%= f.password_field :password, placeholder: 'Enter password' %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
 <% end %>
-
-
-
-
