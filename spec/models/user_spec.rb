@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
 
   before do
-    @user = User.new(name:  "Anthony Kim", email:  "test@test.com", password:  "potato123", password_confirmation: "potato123")
+    @user = User.new(name:  "Anthony Kim", email:  "teSt@test.com", password:  "potato123", password_confirmation: "potato123")
   end
 
   describe 'Validations' do
@@ -84,7 +84,6 @@ RSpec.describe User, type: :model do
         authenticated_user = User.authenticate_with_credentials('teSt@tESt.COM', @user.password)
         expect(authenticated_user).to eq @user
       end
-
 
     end
 
