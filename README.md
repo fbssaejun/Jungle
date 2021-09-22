@@ -9,7 +9,9 @@ Jungle is a  mini e-commerce application built with Rails 4.2.
 - Allow users to view product details, add items to the cart.
 - Allow users to checkout using their credit card.
 
-![](https://github.com/fbssaejun/jungle/blob/master/docs/login_logout_route.gif)
+!["user-login-gif"](https://github.com/fbssaejun/jungle/blob/master/docs/login_logout_route.gif)
+
+!["user-purchase-gif"](https://github.com/fbssaejun/jungle/blob/master/docs/login_logout_route.gif)
 
 <b>Admin</b>
 - Allow user to create, delete, edit exsisting product & category.
