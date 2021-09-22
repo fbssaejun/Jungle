@@ -1,8 +1,26 @@
 # Jungle
 
-A mini e-commerce application built with Rails 4.2 for purposes of teaching Rails by example.
+Jungle is a  mini e-commerce application built with Rails 4.2.
 
-## Additional Steps for Apple M1 Machines
+### Features
+
+<b>Customers</b>
+- Allow users to create an account, log in / out with the account.
+- Allow users to view product details, add items to the cart.
+- Allow users to checkout using their credit card.
+
+
+
+<b>Admin</b>
+- Allow user to create, delete, edit exsisting product & category.
+- Allow user to access amind dash board to view store's information.
+- Allow user to create new promotion for a specific time period.
+
+
+
+
+
+## For Apple M1 users
 
 1. Make sure that you are runnning Ruby 2.6.6 (`ruby -v`)
 1. Install ImageMagick `brew install imagemagick imagemagick@6 --build-from-source`
@@ -28,6 +46,16 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Dependencies
 
-* Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
+* Rails 4.2 
 * PostgreSQL 9.x
 * Stripe
+* Bootstrap
+* bycrypt
+* sass
+
+## Testing  
+
+* rspec
+* capybara
+* poltergeist
+* database_cleaner
